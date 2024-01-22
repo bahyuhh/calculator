@@ -5,8 +5,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator in HTML CSS & JavaScript</title>
+    <title>Calculator BYU</title>
+    <link rel="icon" href="calculator.ico" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
+    <meta
+      name="description"
+      content="project ini dibuat semata mata untuk memenuhi tugas pelajaran pplg saya semoga guru terpuaskan dengan project sederhana yang saya buat ini🥰🥰🥰"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Calculator BYU" />
+    <meta
+      property="og:image"
+      content="https://calculator-byu.web.app/calculator.jpg"
+    />
+    <meta property="og:url" content="https://calculator-byu.web.app" />
+    <link rel="canonical" href="https://calculator-byu.web.app" />
+
     <link rel="stylesheet" href="style.css" />
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('Service Worker registered with scope:', registration.scope);
+          })
+          .catch(error => {
+            console.error('Service Worker registration failed:', error);
+          });
+      }
+    </script>
   </head>
   <body>
     <div class="container">
@@ -39,7 +65,6 @@
         <button class="operator" data-value="=">=</button>
       </div>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>
